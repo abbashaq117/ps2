@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="haqno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-20 05:22:55 PM"/>
+        <attribute name="created" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjA7MDQ6NDA6MTIgUE07Mjg2OA=="/>
+        <attribute name="edited" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjA7MDU6MjI6NTUgUE07MTsyOTg0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastName" type="String" array="False" size=""/>
+            <declare name="nod" type="Integer" array="False" size=""/>
+            <declare name="gi" type="Real" array="False" size=""/>
+            <declare name="ag" type="Integer" array="False" size=""/>
+            <output expression="&quot;Users's last name&quot;" newline="True"/>
+            <input variable="lastName"/>
+            <output expression="&quot;Enter the number of dependents&quot;" newline="True"/>
+            <input variable="nod"/>
+            <output expression="&quot;Enter gross income&quot;" newline="True"/>
+            <input variable="gi"/>
+            <assign variable="gi" expression="gi - nod * 12000"/>
+            <input variable="ag"/>
+            <if expression="gi &gt;= 50000">
+                <then>
+                    <assign variable="gi" expression=".20"/>
+                </then>
+                <else>
+                    <assign variable="gi" expression=".10"/>
+                </else>
+            </if>
+            <output expression="&quot;Last Name:&quot; &amp; lastName &amp; &quot;number of dependents:&quot; &amp; nod &amp; &quot;adjusted gross income:&quot; &amp; ag &amp; &quot;Income tax:&quot; &amp; 100" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

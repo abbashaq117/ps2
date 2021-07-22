@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="haqno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-13 02:30:51 AM"/>
+        <attribute name="created" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMTM7MDE6NTE6MzkgQU07Mjg2Mw=="/>
+        <attribute name="edited" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMTM7MDI6MzA6NTEgQU07MTsyOTYz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qauntity" type="Integer" array="False" size=""/>
+            <declare name="price" type="Integer" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <assign variable="tax" expression="0.07"/>
+            <output expression="&quot;Hello user please enter the number of items: &quot;" newline="True"/>
+            <input variable="qauntity"/>
+            <if expression="qauntity &lt;=1000">
+                <then>
+                    <assign variable="price" expression="5"/>
+                    <assign variable="tax" expression="(qauntity* price)*tax"/>
+                </then>
+                <else>
+                    <assign variable="price" expression="3"/>
+                    <assign variable="tax" expression="(qauntity* price)*tax"/>
+                </else>
+            </if>
+            <output expression="&quot;price= &quot;&amp; price &amp; &quot;,tax= &quot;&amp;tax&amp;&quot;, qauntity= &quot;&amp;qauntity&amp;&quot;, and total= &quot; &amp; (qauntity*price) + tax" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
